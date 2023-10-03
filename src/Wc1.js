@@ -54,9 +54,6 @@ export class Wc1 extends LitElement {
           border-radius: 0;
       }
   }
-  .wrapper{
-    
-  }
   .highlighted{
     background-color: red;
   }

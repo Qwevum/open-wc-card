@@ -16,3 +16,18 @@
 <button id = "delete">Delete Card</button>
 <button id = "title">Change Title</button>
  </div>
+ <script>
+  function setupCardListeners(card) {
+    card.addEventListener("click", function(e){
+      this.classList.toggle("highlighted");
+    } )
+  }
+  const cloneButton = document.getElementById('btn');
+    cloneButton.addEventListener('click', function(){
+      const wrapper = document.getElementById('wrapper');
+      const clonedCard = document.querySelector('.card').cloneNode(true);
+      wrapper.appendChild(clonedCard);
+      setupCardListeners(clonedCard);
+      document.body.appendChild(clonedCard);
+    });
+ </script>

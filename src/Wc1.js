@@ -14,7 +14,7 @@ export class Wc1 extends LitElement {
       border: 2px solid #ccc;
       border-radius: 8px;
     
-  }
+    }
   
   .card-img {
       width: 150px; 
@@ -47,13 +47,13 @@ export class Wc1 extends LitElement {
       }
   }
   
-      .card-img {
+    .card-img {
           width: 100%;
           height: auto;
           margin-right: 0;
           border-radius: 0;
-      }
-  }
+    }
+
   .highlighted{
     background-color: red;
   }

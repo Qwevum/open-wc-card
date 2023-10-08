@@ -13,8 +13,8 @@
  </div>
 </div>
 <button id="btn" class="btn">Add Another Card</button>
-<button id = "delete">Delete Card</button>
-<button id = "title">Change Title</button>
+<button id = "deleteBtn">Delete Card</button>
+<button id = "titleBtn">Change Title</button>
  </div>
  <script>
   function setupCardListeners(card) {
@@ -22,12 +22,22 @@
       this.classList.toggle("highlighted");
     } )
   }
-  const cloneButton = document.getElementById('btn');
-    cloneButton.addEventListener('click', function(){
-      const wrapper = document.getElementById('wrapper');
+  document.getElementById('btn').addEventListener('click', function(){
+      const myCard = document.getElementById('wc1');
       const clonedCard = document.querySelector('.card').cloneNode(true);
-      wrapper.appendChild(clonedCard);
+      myCard.appendChild(clonedCard);
       setupCardListeners(clonedCard);
-      document.body.appendChild(clonedCard);
+      handleCardHover(clonedCard);
     });
+    
+    const deleteBtn = document.getElementById('deleteBtn');
+
+    deleteButton.addEventListener('click', function(){
+      const cards = document.querySelectorAll('.card');
+      const lastCard = cards[cards.length - 1];
+    if (cards.length > 1){
+    lastCard.remove();
+  } 
+});
+
  </script>
